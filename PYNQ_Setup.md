@@ -68,7 +68,8 @@ Once the PYNQ is connected and turned on, the serial port must be opened from th
 First the directory must be moved which can be accomplished by the command:
 * ```cd hash-sigs/```
 
-After that a message that will be signed must be created. For example here the message created is called ```message.txt```, which can be created by running ```nano message.txt```
+After that a message that will be signed must be created. For example here the message created is called ```message.txt```, which can be created by running 
+* ```nano message.txt```
 
 ![](/Pictures/Message.png)
 
