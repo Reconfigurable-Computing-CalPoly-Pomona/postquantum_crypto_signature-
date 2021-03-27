@@ -18,6 +18,5 @@ Collaborators:
 
 Project Sponsors:
 
-NASA
 1. Xilinx Inc.
 2. C3SR Center of Cognitive Computing at UIUC/IBM
