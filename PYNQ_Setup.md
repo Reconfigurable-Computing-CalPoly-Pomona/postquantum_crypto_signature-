@@ -29,13 +29,14 @@ Once the image has finished downloading the next step is to flash the image onto
 ![](/Pictures/Etcher_Flashed.png)
 
 Once flashing has completed the partitions should look like the following picture, with one boot and one root paritition. This step is optional to check if flashing succeeded.
+
 ![](/Pictures/Card_Partitions.png)
 
 Next the PYNQ must be [configured](https://pynq.readthedocs.io/en/latest/getting_started/pynq_z1_setup.html) so it can properly boot from an sd card which should be in the same position as shown in 1. The sd card is inserted on the bottom of the board as shown in 3.
 ![](/Pictures/Board_Setup.PNG)
 
 ### Connecting to the board via a serial Terminal
-#### Linux
+### Linux
 To check what serial port is connected, go to the terminal and type in the following command
 * ```sudo dmesg | grep tty```
 
@@ -45,8 +46,9 @@ The following image shows a sample output. Because the ARM processor is dual cor
 In the serial terminal once the serial port has been selected the baud rate must be set to ```115200``` for proper communication.
 ![](/Pictures/Terminal_Config.png)
 
-#### Windows
-
+### Windows
+To find out the connected serial port in windows the device manager must be opened and the "Ports" section expanded. In this case the device is ```COM4```.
+![](/Pictures/Windows_COM.PNG)
 
 ## Running LMS
 It is important to note that this demo can run on a single device to test its capabilities.
