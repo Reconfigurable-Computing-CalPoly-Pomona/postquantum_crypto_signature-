@@ -18,5 +18,5 @@ Collaborators:
 
 Project Sponsors:
 
-1. Xilinx Inc.
+1. [Xilinx Inc.](https://www.xilinx.com/)
 2. C3SR Center of Cognitive Computing at UIUC/IBM
