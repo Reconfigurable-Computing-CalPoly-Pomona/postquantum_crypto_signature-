@@ -68,7 +68,7 @@ Once the PYNQ is connected and turned on, the serial port must be opened from th
 First the directory must be moved which can be accomplished by the command:
 * ```cd hash-sigs/```
 
-After that a message that will be signed must be created. For example here the message created is called ```message.txt```.
+After that a message that will be signed must be created. For example here the message created is called ```message.txt```, which can be created by running ```nano message.txt```
 
 ![](/Pictures/Message.png)
 
@@ -80,12 +80,12 @@ The next step is to generate the key by running the following command. The gener
 * ```./demo genkey pynqKey```
 
 Once the key has been created it must now be signed by typing in the command;
-```TO DO```
+* ```./demo sign pynqKey message.txt```
 
 ![](/Pictures/Demo_Sign.png)
 
 After signing it can be verified as well. The output will report back whether the data is valid or invalid, meaning it has been tampered with or is incorrect.
-```TO DO```
+* ```./demo verify pynqKey message.txt```
 
 ![](/Pictures/Demo_Valid.png)
 ![](/Pictures/Demo_Invalid.png)
@@ -96,4 +96,5 @@ After signing it can be verified as well. The output will report back whether th
 
 ### PYNQ
 [PYNQ Website](http://www.pynq.io/)
+
 
