@@ -8,17 +8,12 @@ PYNQ is an open-source project by Xilinx that allows the uage of python for rapi
 ## LMS Introduction
 
 ## Requirements
--PYNQ-Z1 board
-
+-[PYNQ-Z1 board](http://www.pynq.io/board.html)
 -USB to Micro-USB cable
-
 -Micro SD card 8Gb or more
-
 -Serial Port Terminal (GTKterm, Putty, TeraTerm, etc.)
-
 -Ethernet cable (Optional)
-
--Software For flashing (Etcher, Rufus, etc.)
+-Software for flashing (Etcher, Rufus, etc.)
 
 ## Setup
 
