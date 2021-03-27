@@ -24,16 +24,55 @@ Bootable images running ubuntu arm with LMS software preinstalled:
 [PYNQ-Z1](https://drive.google.com/file/d/1cGJpK71YlWuMF9Sf-PXz1tq_aS4WoBCR/view?usp=sharing)
 
 Once the image has finished downloading the next step is to flash the image onto the sd card. Take the sd card and plug it into the computer. Make sure it has at least 8Gb and has been formatted (Contains no files or info on it). If there are any files on the sd card they will be lost. The following pictures shows what it would look like in [Etcher](https://www.balena.io/etcher/)
-![Flashing Setup](/Pictures/Etcher_Flashing.png)
+![](/Pictures/Etcher_Flashing.png)
 
-![Finished Flashing](/Pictures/Etcher_Flashed.png)
+![](/Pictures/Etcher_Flashed.png)
 
-Once flashing has completed the partitions should look like the following picture. This step is optional to check if flashing succeeded.
+Once flashing has completed the partitions should look like the following picture, with one boot and one root paritition. This step is optional to check if flashing succeeded.
 ![](/Pictures/Card_Partitions.png)
 
-### Running the image on the PYNQ
+Next the PYNQ must be [configured](https://pynq.readthedocs.io/en/latest/getting_started/pynq_z1_setup.html) so it can properly boot from an sd card which should be in the same position as shown in 1. The sd card is inserted on the bottom of the board as shown in 3.
+![](/Pictures/Board_Setup.PNG)
+
+### Connecting to the board via a serial Terminal
+#### Linux
+To check what serial port is connected, go to the terminal and type in the following command
+* '''sudo dmesg | grep tty'''
+
+The following image shows a sample output. Because the ARM processor is dual core each core gets its own serial port which should show up as ttyUSBx, where x is the number of connected serial ports. The latter port is the one that the serial terminal will communicate. In this case it is '''ttyUSB1'''
+![](/Pictures/Dmesg_Out.png)
+
+In the serial terminal once the serial port has been selected the baud rate must be set to '''115200''' for proper communication.
+![](/Pictures/Terminal_Config.png)
+
+#### Windows
+
 
 ## Running LMS
+It is important to note that this demo can run on a single device to test its capabilities.
+
+Once the PYNQ is connected and turned on, the serial port must be opened from the terminal being used. The image will initialize and it may take a few seconds until it finishes and waits for an input. The username is '''ubuntu''' and the password is '''temppwd'''.
+![](/Pictures/Boot_Image.png)
+
+First the directory must be moved which can be accomplished by the command:
+* '''cd hash-sigs/'''
+
+After that a message that will be signed must be created. For example here the message created is called '''message.txt'''.
+![](/Pictures/Message.png)
+
+To see what operations the demo can run just type the command '''./demo''' and all possibilities will be displayed
+![](/Pictures/Demo.png)
+
+The next step is to generate the key by running the following command. The generation currently will take approximately 3 hours. Here the "pynqKey" is just the name for the key selected but it can be changed to any name.
+* '''./demo genkey pynqKey''' 
+
+Once the key has been created it must now be signed by typing in the command;
+'''TO DO'''
+![](/Pictures/Demo_Sign.png)
+
+After signing it can be verified as well. The output will report back whether the data is valid or invalid, meaning it has been tampered with or is incorrect.
+![](/Pictures/Demo_Valid.png)
+![](/Pictures/Demo_Invalid.png)
 
 ## Additional Resources
 
