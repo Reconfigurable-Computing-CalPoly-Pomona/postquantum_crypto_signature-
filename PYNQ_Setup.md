@@ -9,11 +9,11 @@ PYNQ is an open-source project by Xilinx that allows the uage of python for rapi
 
 ## Requirements
 * [PYNQ-Z1 board](http://www.pynq.io/board.html)
-* USB to Micro-USB cable
-* Micro SD card 8Gb or more
-* Serial Port Terminal (GTKterm, Putty, Tera Term, etc.)
-* Ethernet cable (Optional)
-* Software for flashing (Etcher, Rufus, etc.)
+* [USB to Micro-USB cable](https://www.amazon.com/UGREEN-Braided-Charger-Charging-Controller/dp/B01NBHYAR0/ref=sr_1_2?dchild=1&keywords=usb-A+to+micro+usb+cable&qid=1616939596&sr=8-2)
+* [Micro SD card 8Gb or more](https://www.amazon.com/SanDisk%C2%AE-microSDHCTM-8GB-Memory-Card/dp/B0012Y2LLE/ref=sr_1_3?dchild=1&keywords=micro+sd+card+8Gb&qid=1616939669&sr=8-3)
+* Serial Port Terminal (GTKterm, [Putty](https://www.putty.org/), [Tera Term](https://ttssh2.osdn.jp/index.html.en), etc.)
+* [Ethernet cable (Optional)](https://www.amazon.com/AmazonBasics-RJ45-Cat-6-Ethernet-Patch-Cable-10-Feet-3-Meters/dp/B00N2VISLW/ref=sr_1_2?dchild=1&keywords=Ethernet%2Bcable&qid=1616939698&sr=8-2&th=1)
+* Software for flashing ([Etcher](https://www.balena.io/etcher/), Rufus, etc.)
 
 ## Setup
 
@@ -36,9 +36,9 @@ Next the PYNQ must be [configured](https://pynq.readthedocs.io/en/latest/getting
 
 ![](/Pictures/Board_Setup.PNG)
 
-### Connecting to the board via a serial Terminal
-### Linux
-To check what serial port is connected, go to the terminal and type in the following command
+### Connecting to the board via a serial terminal
+#### Linux
+To check what serial port is connected, open up the terminal (Ubuntu ```ctrl+alt+T```) and type in the following command
 * ```sudo dmesg | grep tty```
 
 The following image shows a sample output. Because the ARM processor is dual core each core gets its own serial port which should show up as ttyUSBx, where x is the number of connected serial ports. The latter port is the one that the serial terminal will communicate. In this case it is ```ttyUSB1```
@@ -49,7 +49,7 @@ In the serial terminal once the serial port has been selected the baud rate must
 
 ![](/Pictures/Terminal_Config.png)
 
-### Windows
+#### Windows
 To find out the connected serial port in windows the device manager must be opened and the "Ports" section expanded. In this case the device is ```COM4```.
 
 ![](/Pictures/Windows_COM.PNG)
@@ -57,6 +57,14 @@ To find out the connected serial port in windows the device manager must be open
 In the serial terminal the setup is similar to Linux. the baud rate must be set to ```115200``` and the correct COM port selected.
 
 ![](/Pictures/Windows_Config.PNG)
+
+### Connecting to the board via ssh (for remote access)
+First the board has to be connected to a router via an ethernet connection. Once that is connected there should be one or two extra LEDs that light up. This example will show how to set it up in linux. In Windows both Putty and Tera Term support ssh as well.
+
+After the hardware is connected a terminal needs to be opened up. The ip address of the pynq must be known before using ssh. The default address is '''192.168.1.87'''. Then enter the following command followed by the password of the device ('''temppwd'''). Once connected move onto the next section
+* ```ssh ubuntu@192.168.1.87```
+
+![](/Pictures/Ssh.png)
 
 ## Running LMS
 It is important to note that this demo can run on a single device to test its capabilities.
