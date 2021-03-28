@@ -13,7 +13,7 @@ PYNQ is an open-source project by Xilinx that allows the uage of python for rapi
 * [Micro SD card 8Gb or more](https://www.amazon.com/SanDisk%C2%AE-microSDHCTM-8GB-Memory-Card/dp/B0012Y2LLE/ref=sr_1_3?dchild=1&keywords=micro+sd+card+8Gb&qid=1616939669&sr=8-3)
 * Serial Port Terminal (GTKterm, [Putty](https://www.putty.org/), [Tera Term](https://ttssh2.osdn.jp/index.html.en), etc.)
 * [Ethernet cable (Optional)](https://www.amazon.com/AmazonBasics-RJ45-Cat-6-Ethernet-Patch-Cable-10-Feet-3-Meters/dp/B00N2VISLW/ref=sr_1_2?dchild=1&keywords=Ethernet%2Bcable&qid=1616939698&sr=8-2&th=1)
-* Software for flashing ([Etcher](https://www.balena.io/etcher/), Rufus, etc.)
+* Software for flashing ([Etcher](https://www.balena.io/etcher/), [Rufus](https://rufus.ie/), etc.)
 
 ## Setup
 
@@ -61,7 +61,7 @@ In the serial terminal the setup is similar to Linux. the baud rate must be set 
 ### Connecting to the board via ssh (for remote access)
 First the board has to be connected to a router via an ethernet connection. Once that is connected there should be one or two extra LEDs that light up. This example will show how to set it up in linux. In Windows both Putty and Tera Term support ssh as well.
 
-After the hardware is connected a terminal needs to be opened up. The ip address of the pynq must be known before using ssh. The default address is '''192.168.1.87'''. Then enter the following command followed by the password of the device ('''temppwd'''). Once connected move onto the next section
+After the hardware is connected a terminal needs to be opened up. The ip address of the pynq must be known before using ssh. The default address is ```192.168.1.87```. Then enter the following command followed by the password of the device (```temppwd```). Once connected move onto the next section
 * ```ssh ubuntu@192.168.1.87```
 
 ![](/Pictures/Ssh.png)
