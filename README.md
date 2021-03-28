@@ -1,6 +1,6 @@
-# postquantum_crypto_signature-
+# postquantum_crypto_signature
 
-Principal Investigator:
+**Principal Investigator:**
 
 - **Dr. Mohamed El-Hadedy:** Assistant Professor, Electrical and Computer Engineering Department, College of Engineering, California State Polytechnic University, Pomona
 
