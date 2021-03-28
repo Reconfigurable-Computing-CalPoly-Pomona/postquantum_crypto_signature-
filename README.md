@@ -7,8 +7,11 @@ Principal Investigator:
 Team Members:
 
 **1. Ian Lieu:** Electrical and Computer Engineering Department, College of Engineering, California State Polytechnic University, Pomona
+
 **2. Andres Colon:** Electrical and Computer Engineering Department, College of Engineering, California State Polytechnic University, Pomona
+
 **3. Peter Anthony:** Electrical and Computer Engineering Department, College of Engineering, California State Polytechnic University, Pomona
+
 **4. Arron Lu:** Electrical and Computer Engineering Department, College of Engineering, California State Polytechnic University, Pomona
 
 
