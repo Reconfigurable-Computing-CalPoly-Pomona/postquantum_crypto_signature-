@@ -8,6 +8,9 @@
 PYNQ is an open-source project by Xilinx that allows the uage of python for rapid protoyping. The chipset that the board uses is the Zynq-7000 series. This chip contains both a dual-core ARM Cortex-A9 processor and fpga fabric. This gives the flexibility to run an arm based operating system in combination with a custom fpga hardware design. The board this project currently supports and was created for is the PYNQ-Z1
 
 ## LMS Introduction
+Leighton-Micali Signatures (LMS) is a post-quantum robust hash-based signature scheme which allows for key generation , signature generation, and signature verification. LMS's structure is based on a binary Merkle Tree in which each node contains the hash of its two leaves. The lowest level leaves contain the Winternitz One-Time Signature (WOTS) chain. The hash function used in LMS by default is SHA-2/256. Due to the nature of LMS using WOTS, each signature generated with LMS is only a one time use. The variant of LMS used in this implementation is called Heirachial Signature System (HSS) and utilizes 2 separate levels of the binary Merkle Tree, each with a different height. This allows for increased performance because only parts of the tree need be generated at a given time. 
+
+[LMS/HSS by Cisco](https://github.com/cisco/hash-sigs)
 
 ## Requirements
 * [PYNQ-Z1 board](http://www.pynq.io/board.html)
