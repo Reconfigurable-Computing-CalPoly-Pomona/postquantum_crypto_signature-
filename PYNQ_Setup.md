@@ -80,6 +80,9 @@ To see what operations the demo can run just type the command ```./demo``` and a
 The next step is to generate the key by running the following command. The generation currently will take approximately 3 hours. Here the "pynqKey" is just the name for the key selected but it can be changed to any name.
 * ```./demo genkey pynqKey```
 
+![](/Pictures/Genkey_Start.png)
+![](/Pictures/Genkey_End.png)
+
 Once the key has been created it must now be signed by typing in the command;
 * ```./demo sign pynqKey message.txt```
 
