@@ -1,6 +1,8 @@
 # Running LMS on PYNQ_Z1 board
 
-[Video Tutorial](https://youtu.be/cnxKVU59BXg)
+[Linux Tutorial With SSH](https://youtu.be/cnxKVU59BXg)
+
+[Windows Tutorial With Serial Terminal](https://youtu.be/AtVcn33WBqA)
 
 ## PYNQ Introduction
 PYNQ is an open-source project by Xilinx that allows the uage of python for rapid protoyping. The chipset that the board uses is the Zynq-7000 series. This chip contains both a dual-core ARM Cortex-A9 processor and fpga fabric. This gives the flexibility to run an arm based operating system in combination with a custom fpga hardware design. The board this project currently supports and was created for is the PYNQ-Z1
