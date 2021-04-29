@@ -1,8 +1,5 @@
 # CPP Engineering Showcase
 
-Presentation Link:
-https://youtu.be/hNkePurN5uQ
-
 Demo Link:
 https://youtu.be/IqCrmpDdR1I
 
