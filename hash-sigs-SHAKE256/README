@@ -1,7 +1,4 @@
-This code attempts to be a usable implementation of the LMS Hash Based
-Signature Scheme from RFC 8554.
+This code adapts the SHA-3 hash function - SHAKE-256 - into the LMS Hash
+Based Signature Scheme from RFC 8554 Cisco https://github.com/cisco/hash-sigs
 
 See read.me for documentation how to use it.
-
-This is the ACVP branch - designed to be (optionally) compatible with the
-public ACVP server
